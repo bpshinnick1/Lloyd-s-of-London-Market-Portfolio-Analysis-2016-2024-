@@ -1,5 +1,12 @@
 # Lloyd's of London — Market Portfolio Analysis (2016–2024)
 
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?logo=postgresql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-yellow?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.1+-green?logo=pandas&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-orange?logo=powerbi&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
 A full-stack data analytics project analysing 9 years of Lloyd's of London underwriting performance across 8 classes of business. Built with PostgreSQL, Python, and Power BI to demonstrate how data analysis supports commercial insurance underwriting decisions.
 
 ![Dashboard Preview](screenshots/dashboard_overview.png)
