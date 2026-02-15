@@ -177,6 +177,29 @@ All data sourced from publicly available Lloyd's of London publications:
 
 ---
 
+## Methodology & Data Notes
+
+This project works exclusively with publicly available data, which required several analytical decisions where Lloyd's reporting didn't provide complete granularity. These are documented here for transparency.
+
+### 1. Attritional Loss Ratio & Underlying CR — 2016 Gap
+
+Lloyd's did not report attritional loss ratio or underlying combined ratio in their current format prior to 2017. These metrics were introduced as part of the Performance Management Directorate's reporting improvements. As a result, the `market_totals` table contains null values for `attritional_loss_ratio_pct` and `underlying_cr_pct` in 2016. Dashboard visuals using these fields begin from 2017 rather than 2016.
+
+### 2. Net Earned Premium — Derived Calculation
+
+Lloyd's publishes gross written premium (GWP) at class level but does not consistently report net earned premium (NEP) by class. NEP was therefore derived using the mathematical relationship between underwriting result and combined ratio:
+```
+NEP = Underwriting Result / (1 - Combined Ratio / 100)
+```
+
+This is a standard technique in market analysis and reconciles closely to published market-level NEP figures. One limitation: when combined ratio is very close to 100% and the underwriting result is near zero, the derivation can produce values that appear low relative to GWP — this reflects the high cession rates in certain classes rather than a calculation error.
+
+### 3. Reinsurance Subclass Allocation
+
+Lloyd's reports reinsurance as a single class in some years but the market operates across three distinct subclasses: Property, Casualty, and Specialty reinsurance. Where aggregate reinsurance figures were available but subclass splits were not, allocation was estimated using GWP share proportions derived from years where full breakdowns were published. This approach assumes a broadly stable portfolio mix within the reinsurance segment, which is consistent with how market analysts typically decompose Lloyd's reinsurance results.
+
+---
+
 ## How to Run
 
 **Prerequisites:** PostgreSQL, Python 3, Power BI Desktop
