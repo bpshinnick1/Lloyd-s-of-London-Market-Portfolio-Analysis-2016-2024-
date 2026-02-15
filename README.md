@@ -110,6 +110,8 @@ lloyds-portfolio-analysis/
 
 ![Volatility Query Results](screenshots/pgadmin_query5_volatility.png)
 
+![Reserves](screenshots/pgadmin_query7_reserves.png)
+
 ---
 
 ## Python Enrichment
