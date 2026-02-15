@@ -108,7 +108,11 @@ lloyds-portfolio-analysis/
 | 7 | Reserve Development | Conditional aggregation | Reveals which classes carry reserve risk |
 | 8 | Class vs Market Performance | Multi-table `JOIN` | Spots structural outperformers/underperformers |
 
+Volatility Query Results:
+
 ![Volatility Query Results](screenshots/pgadmin_query5_volatility.png)
+
+Reserves Query Results:
 
 ![Reserves](screenshots/pgadmin_query7_reserves.png)
 
